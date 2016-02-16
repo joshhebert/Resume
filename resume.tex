@@ -1,0 +1,74 @@
+\documentclass[11pt,article,oneside]{memoir}   
+\usepackage{fontawesome,url}
+\usepackage{geometry}
+\addtolength{\topmargin}{-.25in}
+
+\begin{document}
+
+
+\newcommand{\marginhead}[1]{\marginpar{\textsf{{\footnotesize\vspace{-1em}\flushright #1}}}}
+
+%% No bullets on labels
+\renewcommand{\labelitemi}{~} 
+
+\def\ind{\hangindent=1 true cm\hangafter=1 \noindent}
+\def\labelitemi{~}
+\renewcommand{\labelitemii}{~}
+
+
+%% Name 
+\noindent{\LARGE\scheader \textsc{Josh Hebert}}
+\reversemarginpar
+
+\hfill\begin{minipage}[t]{1.3in}
+  \flushright \footnotesize (603)475-8232 \, \faPhone \\ 
+  {\scriptsize  jhebes7@gmail.com \, \faEnvelope} \\
+\end{minipage}
+
+\bigskip       
+
+
+\marginhead{\sffamily education}\vspace{0.08in}
+
+\ind Worcester Polytechnic Institute, \\
+Computer Science, 3.43/4.0.      
+
+\bigskip
+
+
+\marginhead{\sffamily {\vskip 0.35em} experience}
+\medskip
+
+\vspace{0.05in}
+\noindent{Imprivata\hfill\emph{2014-Present}\\
+\ind{Software Engineering Intern}}\\
+\vspace{-0.18in}
+\footnotesize 
+\begin{itemize}
+  \item Agile Environment
+  \item Wrote Windows driver to simulate Bluetooth low-energy OTP 
+	exchange. Involved reverse engineering firmware of BLE adapter 
+	and transport stack and replication of findings in UMDF driver.
+    (MSVC++)
+  \item Integrated palm-recognition technology into SE demonstration tool (C#)
+  \item Converted Oracle Database schema and stored procedures to Postgres
+\end{itemize}
+\vspace{-0.075in}
+
+\normalsize
+\bigskip
+
+\vspace{0.05in}
+\noindent{WPI\hfill\emph{2015-Present}\vspace{0.05in}\\
+\ind{Teaching Assistant}}\\
+\vspace{-0.18in}
+\footnotesize 
+\begin{itemize}
+  \item Provided guidance for WPI students in both the Object-Oriented Programming 
+    and Systems Programming courses
+\end{itemize}
+\vspace{-0.075in}
+
+
+
+\end{document}
