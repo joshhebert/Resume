@@ -1,133 +1,145 @@
-\documentclass[11pt,article,oneside]{memoir}   
+\documentclass[11pt,oneside]{letter}   
 \usepackage{fontawesome,url}
-\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{ragged2e}
+\usepackage[a4paper,
+    left=2.5in,right=0.5in,top=1.5in,bottom=1in
+]{geometry}
+\usepackage{setspace}
+\usepackage[absolute,verbose,overlay]{textpos}
 \addtolength{\topmargin}{-.4in}
 \usepackage{graphicx}
 \thispagestyle{empty}
-\usepackage[inline]{enumitem}
 \usepackage{xcolor}
-\usepackage{fancybox}
+\usepackage[none]{hyphenat}
+{\renewcommand\labelitemi{-}
+\newenvironment{tightitemize}{\itemize\addtolength{\itemsep}{-0.2em}}{\enditemize}
+
 
 \begin{document}
 
-\newcommand{\marginhead}[1]{\marginpar{\textsf{{\footnotesize\vspace{-1em}\flushright #1}}}}
-\renewcommand{\labelitemi}{~} 
-\def\ind{\hangindent=1 true cm\hangafter=1 \noindent}
-\def\labelitemi{~}
-\renewcommand{\labelitemii}{~}
+% Sidebar
+\begin{textblock*}{35mm}(10mm,15mm)
+\noindent{\Huge{Josh Hebert}}\\\\
+    \faPhone \, (603)475-8232\\ 
+    \faEnvelope \, jahebert@wpi.edu \\
+    \faGithub \, /joshhebert \\
+    \faLinkedin \, /in/joshhebert \\
+    
+    %Summary
+    
+    Aspiring cybersecurity professional with strong background in system programming and network protocols. Looking for internship to prepare for a position in the computer intelligence community.\\\\
+    Employer must be US government or a FFRDC.\\\\
 
 
-\hfill\begin{minipage}[t]{1.5in}
-  \flushright \footnotesize (603)475-8232 \, \faPhone \\ 
-  {\scriptsize jahebert@wpi.edu \, \faEnvelope} \\
-  {\scriptsize /jhebes \, \faGithub} \\
-  {\scriptsize /joshhebert \, \faLinkedin}\\
-\end{minipage}
 
-\vspace{-0.5in}
-\noindent{\HUGE {Josh Hebert}}\\
-\ind\begin{center}
-\emph{"I'm pretty good at reading StackOverflow"}
-\end{center}
-\vspace{-0.2in}
-\bigskip       
-\reversemarginpar
+    {\bf Languages \&\\Technologies:}
+    \begin{itemize}[leftmargin=0in]
+        \item[] Functional Programming
+        \item[] Multithreaded Design
+        \item[] Distributed Systems
+        \item[] Socket Programming
+        \item[] Software Security
+        \item[] OO Programming
+        \item[] Typescript
+        \item[] Linux
+        \item[] Java
+        \item[] Git
+        \item[] Ruby 
+        \item[] Go
+        \item[] C
+    \end{itemize}
+\end{textblock*}
 
-\marginhead{\sffamily education}\vspace{0.08in}
-
-\ind Worcester Polytechnic Institute, \\
-Computer Science, 3.46/4.0 (3.63 Major)      
-
-\bigskip
-
-\marginhead{\sffamily {\vskip 0.35em} skills}
-\medskip
-\noindent{\begin{enumerate*}[label=]
-  \item \ovalbox{Ruby}
-  \item \ovalbox{C/C++}
-  \item \ovalbox{Javascript/AngularJS}
-  \item \ovalbox{Java}
-  \item \ovalbox{Object-Oriented Design}
-  \item \ovalbox{MySQL}
-  \item \ovalbox{Linux (Extensive)}
-\end{enumerate*}}
-\bigskip
-
-\marginhead{\sffamily {\vskip 0.35em} experience}
-\medskip
-\vspace{0.05in}
-\noindent{Imprivata\hfill\emph{2014-2015}\\
-\ind{Software Engineering Intern}}\\
-\vspace{-0.18in}
-\footnotesize 
-\begin{itemize}
-  \item Wrote Windows driver to simulate Bluetooth low-energy OTP 
-	exchange by reverse engineering firmware of BLE adapter 
-	and transport stack and replication of findings in UMDF driver.
-    (MSVC++)
-  \item Integrated palm-recognition technology into SE demonstration tool (C\#)
-  \item Converted Oracle Database schema and stored procedures to Postgres
+{\bf{\Large Education}}\\
+Worcester Polytechnic Institute \\
+B.S. Computer Science, {\bf3.51/4.0}, May 2017 (Expected)\\
+M.S. Cybersecurity, May 2018 (Expected)\\\\
+{\bf Significant Courses:}
+\vspace{-0.15in}
+{\footnotesize
+\begin{multicols}{2}
+\begin{itemize}[leftmargin=0.3in]
+    \addtolength{\itemsep}{-0.6em}
+    \item Software Security Design and Analysis
+    \item Software Security Engineering
+    \item Distributed Computer Systems
+    \item Advanced Computer Networks
+    \item Cryptography and Data Security
+    \item Design of Software Systems
+    \item Database Systems
+    \item Operating Systems
 \end{itemize}
-\vspace{-0.075in}
+\end{multicols}}
+{\bf{\Large Relevant Work Experience}}
 
-\normalsize
-\bigskip
+Imprivata, Software Engineering Intern\hfill{\bf{Summers 2014-2016}}
+\vspace{-0.13in}
+{\footnotesize 
+\begin{tightitemize}
+    \item Developed communication system for transferring authenticated user sessions from desktop computers to Android mobile devices
+    \item Wrote Windows driver to simulate Bluetooth low-energy OTP exchange by reverse engineering firmware of BLE adapter and transport stack and replication of findings in UMDF driver.
+    \item Integrated palm-recognition technology into SE demonstration tool (C\#)
+    \item Converted Oracle Database schema and stored procedures to Postgres
+\end{tightitemize}}
 
-\vspace{0.05in}
-\noindent{WPI\hfill\emph{2015-Present}\vspace{0.05in}\\
-\ind{Teaching Assistant}}\\
-\vspace{-0.18in}
-\footnotesize 
-\begin{itemize}
-  \item Provided guidance for WPI students in both the Object-Oriented Programming 
-    and Systems Programming courses
-\end{itemize}
-\vspace{-0.075in}
+WPI, Teaching Assistant\hfill{\bf{2015-Present}}\\
+\vspace{-0.28in}
+{\footnotesize 
+\begin{tightitemize}
+    \item Provided guidance for WPI students in both the object-oriented programming and systems programming courses, some of which had over 200 students
+\end{tightitemize}}
 
-\normalsize
-\bigskip
 
-\vspace{0.05in}
-\noindent{Russell Draper \& Associates\hfill\emph{2013}\vspace{0.05in}\\
-\ind{System Administration Intern}}\\
-\vspace{-0.18in}
-\footnotesize 
-\begin{itemize}
+Russell Draper \& Associates, System Administration Intern\hfill{\bf2013}\\
+\vspace{-0.28in}
+{\footnotesize 
+\begin{tightitemize}
   \item Managed deployment of SpamAssassin software onto company mail server
   \item Designed and configured new Wordpress-based company website
   \item Wrote regular articles for company blog
-\end{itemize}
-\vspace{-0.075in}
+\end{tightitemize}}
 
-\normalsize
-\bigskip
 
-\vspace{0.05in}
-\noindent{Sophos\hfill\emph{2011}\vspace{0.05in}\\
-\ind{Information Technology Intern}}\\
-\vspace{-0.18in}
-\footnotesize 
-\begin{itemize}
+Sophos, Information Technology Intern\hfill{\bf2011}\\
+\vspace{-0.28in}
+{\footnotesize 
+\begin{tightitemize}
   \item Resolved tickets from company-wide help desk
   \item Issues ranged from hardware repairs to software installation and upgrade
-\end{itemize}
-\vspace{-0.075in}
+\end{tightitemize}}
+
 
 \bigskip
-\normalsize 
 
-\marginhead{\sffamily {\vskip 0.35em} organizations}
-\medskip
+{\bf{\Large Additional Experience and Awards}}
 
-\vspace{0.05in}
-\noindent{Upsilon Pi Epsilon\hfill\emph{2014-Present}\vspace{0.05in}\\
-\ind{Society President}}\\
-\vspace{-0.18in}
-\footnotesize 
-\begin{itemize}
-  \item WPI's chapter of UPE, the national computer science honor society
-\end{itemize}
-\vspace{-0.075in}
+Upsilon Pi Epsilon\\
+Treasurer\hfill{\bf 2016-Present}\\
+President\hfill{\bf 2014-2016}\\
+\vspace{-0.28in}
+{\footnotesize 
+\begin{tightitemize}
+  \item Served as elected official of UPE, the national computer science honor society. 
+  \item Responsible for coordinating events for the entire society of members, as well as events for the general student body of WPI, such as mock technical interviews and member inductions. 
+  \item Managed financial accounts of the society, where many transactions were over a thousand dollars. During term, society inducted over 40 new members.
+\end{tightitemize}}
 
+WPI Collegiate Cyber Defense Competition Team\\
+Linux Expert\hfill{\bf2013-2015}\\
+\vspace{-0.28in}
+{\footnotesize 
+\begin{tightitemize}
+  \item Team placed 3rd in the 2014 Northeast Collegiate Cyber Defense Competition
+  \item Administered and defended multiple Linux servers and workstations from advanced persistent threats carried out by skilled cybersecurity professionals
+  \item Configured and utilized indtrusion detection systems such as Snort and Artillery
+\end{tightitemize}}
+
+Cybercorps Scholarship for Service Recipient\hfill{\bf 2016}\\
+
+\begin{textblock*}{30mm}(185mm,280mm)
+{\Large \LaTeX}
+\end{textblock*}
 
 \end{document}
